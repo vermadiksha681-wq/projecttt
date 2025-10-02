@@ -1,0 +1,213 @@
+/* GLOBAL */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #fff5f7; color: #4b3a44; line-height: 1.7; }
+
+/* NAVBAR */
+.navbar {
+  background: #fdfdfd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+   height: 70px; 
+}
+
+.nav-left {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #b5651d;
+}
+
+/* .logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+} */
+ .logo {
+  /* font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  max-height: 70px;  /* agar navbar me aur fit chahiye, 50-60px best hai */
+  width: auto;
+  display: block;
+  object-fit: contain;
+ 
+}
+.nav-right {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon-img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown input[type="checkbox"] {
+  display: none;
+}
+.dropbtn {
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+}
+.dropbtn:hover {
+  color: #b5651d;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.dropdown-content a:hover {
+  background: #ffe6f0;
+  color: #b5651d;
+  border-radius: 8px;
+}
+.dropdown input[type="checkbox"]:checked ~ .dropdown-content {
+  display: block;
+}
+
+/* HOME SECTION */
+.home {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* ABOUT SECTION */
+/* ABOUT SECTION STYLING */
+.about {
+  max-width: 800px;       /* width limited for better readability */
+  margin: 80px auto;      /* center in page */
+  text-align: center;     /* center text */
+  padding: 20px;
+}
+
+/* Heading styling */
+/* .about h1 {
+  font-size: 3rem;         
+  color: #4c3c42;         
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  font-style: italic;
+} */
+ .about h1 {
+  font-family: 'Playfair Display', serif; /* elegant serif */
+  font-weight: 300; /* thin / light */
+  font-size: 3rem;
+  color: #8b3a5b; /* elegant burgundy */
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-style: italic
+}
+
+/* Highlight 'Heritage Couture' in heading */
+
+
+/* Optional: small underline for heading */
+.about h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #d97ca2;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Paragraph text */
+.about p {
+  font-size: 1.15rem;     /* slightly larger text */
+  line-height: 1.8;       /* spacing for easy reading */
+  color: #4b3a44;         /* soft deep brown */
+  margin-top: 15px;
+   font-style: italic
+}
+
+/* Highlight strong text inside paragraph */
+.about p strong {
+  color: #b5651d;         /* warm goldish brown for emphasis */
+}
+
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+.footer-container h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.footer-about, .footer-address {
+  width: 45%;
+  min-width: 250px;
+}
+footer p {
+  margin: 6px 0;
+}
+
